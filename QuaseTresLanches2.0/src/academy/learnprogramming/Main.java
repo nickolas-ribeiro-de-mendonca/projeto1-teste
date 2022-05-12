@@ -119,14 +119,16 @@ public class Main {
 
     public static void mostrarListaDeClientes() {
         if (mapaDeClientes.size() != 0) {
-            for (long i = 1; i <= mapaDeClientes.size(); i++) {
-                Cliente cliente = mapaDeClientes.get(i);
-                System.out.println("Cliente " + i + ":");
-                System.out.println("         Nome: " + cliente.getNomeDoCliente());
-                System.out.println("         Endereco: " + cliente.getEnderecoDoCliente());
-                System.out.println("         Telefone: " + cliente.getNumeroDeTelefoneDoCliente());
-                System.out.println("         CPF: " + cliente.getCpf());
-                System.out.println(" ");
+            for (long i = 1; i <=contadorDeCliente; i++) {
+                if (mapaDeClientes.get(i)!= null) {
+                    Cliente cliente = mapaDeClientes.get(i);
+                    System.out.println("Cliente " + i + ":");
+                    System.out.println("         Nome: " + cliente.getNomeDoCliente());
+                    System.out.println("         Endereco: " + cliente.getEnderecoDoCliente());
+                    System.out.println("         Telefone: " + cliente.getNumeroDeTelefoneDoCliente());
+                    System.out.println("         CPF: " + cliente.getCpf());
+                    System.out.println(" ");
+                }
             }
         }else {
             System.out.println("Ainda nao existem cliente cadastrados");
