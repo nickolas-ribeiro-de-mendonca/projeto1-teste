@@ -25,6 +25,6 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return pedidos +":"+valor;
+        return String.format("%s",pedidos)+":"+String.format("%.2f",valor);
     }
 }

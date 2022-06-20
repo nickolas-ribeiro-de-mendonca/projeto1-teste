@@ -14,25 +14,25 @@ public class Salgadinhos implements AdicionarPedidos {
         System.out.println("=======================================");
         System.out.println("           Opcoes de salgados");
         System.out.println("            Salgados Assados:");
-        System.out.println("      1 - Pastel de frango R$4.00");
-        System.out.println("       2 - Empada de frago R$4.50");
-        System.out.println("        3 - Joelho de moca R$4.00");
+        System.out.println("      1 - "+Cardapio.SALGADO_PASTEL_DE_FRANGO+" R$"+Cardapio.VALOR_PASTEL_DE_FRANGO);
+        System.out.println("       2 - "+Cardapio.SALGADO_EMPADA_DE_FRANG+" R$"+Cardapio.VALOR_EMPADA_DE_FRANGO);
+        System.out.println("        3 - "+Cardapio.SALGADO_EMPADA_DE_FRANG+" R$"+Cardapio.VALOR_EMPADA_DE_FRANGO);
         System.out.println("            Salgados fritos:");
-        System.out.println("           4 - Coxinha R$3.50");
-        System.out.println("       5 - Pastesl de carne R$4.50");
-        System.out.println("           6 - Quibe R$4.00");
+        System.out.println("           4 - "+Cardapio.SALGADO_COXINHA+" R$"+Cardapio.VALOR_COXINHA);
+        System.out.println("       5 - "+Cardapio.SALGADO_PASTEL_CARNE+" R$"+Cardapio.VALOR_PASTEL_DE_CARNE);
+        System.out.println("           6 - Quibe "+Cardapio.SALGADO_QUIBE+" R$"+Cardapio.VALOR_QUIBE);
         System.out.println("=======================================");
     }
 
     public void escolherSalgado(){
         int opcao;
         Menu menu = new Menu("OPÇÕES DE SALGADOS","Salgados assados");
-        menu.adicionarItemComValor("PASTELFRANGO","Pastel de frango",4.0);
-        menu.adicionarItemComValor("EMPADAFRANGO","Empada de Frango",4.5);
-        menu.adicionarItemComValor("JOELHO","Joelho de Moça",4.0);
-        menu.adicionarItemComValor("COXINHA","Coxinha",3.5);
-        menu.adicionarItemComValor("PASTELCARNE","Pastel de Carne",4.5);
-        menu.adicionarItemComValor("QUIBE","Quibe",4.0);
+        menu.adicionarItemComValor("PASTELFRANGO",Cardapio.SALGADO_PASTEL_DE_FRANGO,Cardapio.VALOR_PASTEL_DE_FRANGO);
+        menu.adicionarItemComValor("EMPADAFRANGO",Cardapio.SALGADO_EMPADA_DE_FRANG,Cardapio.VALOR_EMPADA_DE_FRANGO);
+        menu.adicionarItemComValor("JOELHO",Cardapio.SALGADO_JOELHO_DE_MOCA,Cardapio.VALOR_JOELHO_DE_MOCA);
+        menu.adicionarItemComValor("COXINHA",Cardapio.SALGADO_COXINHA,Cardapio.VALOR_COXINHA);
+        menu.adicionarItemComValor("PASTELCARNE",Cardapio.SALGADO_PASTEL_CARNE,Cardapio.VALOR_PASTEL_DE_CARNE);
+        menu.adicionarItemComValor("QUIBE",Cardapio.SALGADO_QUIBE,Cardapio.VALOR_QUIBE);
         menu.imprimir();
         boolean sair = false;
         while (!sair){
@@ -44,33 +44,33 @@ public class Salgadinhos implements AdicionarPedidos {
                     sair = true;
                     break;
                 case 1:
-                    setPrecoSalgado(4);
-                    setTipoDeSalgado("Pastel assado");
+                    setPrecoSalgado(Cardapio.VALOR_PASTEL_DE_FRANGO);
+                    setTipoDeSalgado(Cardapio.SALGADO_PASTEL_DE_FRANGO);
                     sair = true;
                     break;
                 case 2:
-                    setPrecoSalgado(4.5);
-                    setTipoDeSalgado("Empada de frago");
+                    setPrecoSalgado(Cardapio.VALOR_EMPADA_DE_FRANGO);
+                    setTipoDeSalgado(Cardapio.SALGADO_EMPADA_DE_FRANG);
                     sair = true;
                     break;
                 case 3:
-                    setPrecoSalgado(4);
-                    setTipoDeSalgado("Joelho de moça");
+                    setPrecoSalgado(Cardapio.VALOR_JOELHO_DE_MOCA);
+                    setTipoDeSalgado(Cardapio.SALGADO_JOELHO_DE_MOCA);
                     sair = true;
                     break;
                 case 4:
-                    setPrecoSalgado(3.5);
-                    setTipoDeSalgado("Coxinha");
+                    setPrecoSalgado(Cardapio.VALOR_COXINHA);
+                    setTipoDeSalgado(Cardapio.SALGADO_COXINHA);
                     sair = true;
                     break;
                 case 5:
-                    setPrecoSalgado(4.5);
-                    setTipoDeSalgado("Pastel de carne");
+                    setPrecoSalgado(Cardapio.VALOR_PASTEL_DE_CARNE);
+                    setTipoDeSalgado(Cardapio.SALGADO_PASTEL_CARNE);
                     sair = true;
                     break;
                 case 6:
-                    setPrecoSalgado(4);
-                    setTipoDeSalgado("Quibe");
+                    setPrecoSalgado(Cardapio.VALOR_PASTEL_DE_CARNE);
+                    setTipoDeSalgado(Cardapio.SALGADO_QUIBE);
                     sair = true;
                     break;
             }

@@ -14,14 +14,14 @@ public class Pizza  implements AdicionarPedidos{
 
     public void escolhaDePizza(){
         Menu menu = new Menu("MENU DE PIZZAS","Todas as pizzas contam com um\n" +
-                "    delicioso moho faieto na casa");
-        menu.adicionarItemComValor("CALABRESA","Calabresa",30.0);
-        menu.adicionarItemComValor("MARGUERITA","Marguerita",25.0);
-        menu.adicionarItemComValor("MUSSARELA","Mussarela",20.0);
-        menu.adicionarItemComValor("FRANGO","Frango",25.0);
-        menu.adicionarItemComValor("BACON","Bacon",28.0);
-        menu.adicionarItemComValor("PROTUGUESA","Porturguesa",35.0);
-        menu.adicionarItemComValor("PERSONALIZADA","A Moda do Cliente",0.0);
+                "    delicioso molho faieto na casa");
+        menu.adicionarItemComValor("CALABRESA",Cardapio.PIZZA_CALABRESA,Cardapio.CALABRESA_VALOR);
+        menu.adicionarItemComValor("MARGUERITA",Cardapio.PIZZA_MARGUERITA,Cardapio.MARGUERITA_VALOR);
+        menu.adicionarItemComValor("MUSSARELA",Cardapio.PIZZA_MUSSARELA,Cardapio.MUSSARELA_VALOR);
+        menu.adicionarItemComValor("FRANGO",Cardapio.PIZZA_FRANGO,Cardapio.FRANGO_VALOR);
+        menu.adicionarItemComValor("BACON",Cardapio.PIZZA_BACON,Cardapio.BACON_VALOR);
+        menu.adicionarItemComValor("PROTUGUESA",Cardapio.PIZZA_PORTUGUESA,Cardapio.PORTUGUESA_VALOR);
+        menu.adicionarItemComValor("PERSONALIZADA",Cardapio.PIZZA_PERSONALIZADA,0.0);
         menu.imprimir();
         int opcao;
         boolean sair = false;
@@ -33,39 +33,39 @@ public class Pizza  implements AdicionarPedidos{
                     System.out.println("Retornando ao menu  de pedidos...");
                     break;
                 case 1:
-                    setPreco(30);
-                    setSaborDaPizza("Calabresa");
+                    setPreco(Cardapio.CALABRESA_VALOR);
+                    setSaborDaPizza(Cardapio.PIZZA_CALABRESA);
                     sair = true;
                     break;
                 case 2:
-                    setPreco(25);
-                    setSaborDaPizza("Marguerita");
+                    setPreco(Cardapio.MARGUERITA_VALOR);
+                    setSaborDaPizza(Cardapio.PIZZA_MARGUERITA);
                     sair = true;
                     break;
                 case 3:
-                    setPreco(20);
-                    setSaborDaPizza("Mussarela");
+                    setPreco(Cardapio.MUSSARELA_VALOR);
+                    setSaborDaPizza(Cardapio.PIZZA_MUSSARELA);
                     sair = true;
                     break;
                 case 4:
-                    setPreco(25);
-                    setSaborDaPizza("Frango");
+                    setPreco(Cardapio.FRANGO_VALOR);
+                    setSaborDaPizza(Cardapio.PIZZA_FRANGO);
                     sair = true;
                     break;
                 case 5:
-                    setPreco(28.00);
-                    setSaborDaPizza("Bacon");
+                    setPreco(Cardapio.BACON_VALOR);
+                    setSaborDaPizza(Cardapio.PIZZA_BACON);
                     sair = true;
                     break;
                 case 6:
-                    setPreco(35);
-                    setSaborDaPizza("Portuguesa");
+                    setPreco(Cardapio.PORTUGUESA_VALOR);
+                    setSaborDaPizza(Cardapio.PIZZA_PORTUGUESA);
                     sair = true;
                     break;
                 case 7:
                     MontarPizza montarPizza = new MontarPizza();
                     setPreco(montarPizza.adicaoDeIngredientes());
-                    setSaborDaPizza("A Moda do Cliente");
+                    setSaborDaPizza(Cardapio.PIZZA_PERSONALIZADA);
                     sair = true;
                     break;
             }

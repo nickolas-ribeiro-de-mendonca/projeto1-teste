@@ -1,8 +1,0 @@
-teste1,1
-teste2,2
-teste5,5
-teste4,6
-teste6,7
-teste3,8
-nickolas,9
-nick,11
